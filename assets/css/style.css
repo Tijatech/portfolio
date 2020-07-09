@@ -1,0 +1,310 @@
+/* custom classes */
+.flex{
+    display: flex;
+}
+.alg-itm-center{
+    align-items: center;
+}
+.justify-con-sa{
+    justify-content: space-around;
+}
+.p-relative{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+/* End of custom  classes */
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.app{
+    background: url(https://i.pinimg.com/originals/a8/fa/f1/a8faf1b25a487ee49e69d06fc4c70178.gif);
+    min-height: 100vh;
+    color: rgb(221, 213, 213);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    overflow: hidden;
+}
+/* Side navbar styling starts */
+.app #sidenav{
+    position: fixed;
+    box-shadow: 1px 1px 5px grey;
+    background: url(https://img1.picmix.com/output/stamp/normal/8/6/5/9/1549568_2e6f5.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-width: 200px;
+    width: 300px;
+    transform: translate(-100%);
+    z-index: 2;
+    transition: transform 200ms 300ms ease-in-out;
+    
+    
+}
+#sidenav .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#sidenav .flex .p .name{
+    font-size: 25px;
+    padding: 20px 10px;
+    font-family: monospace;
+    text-shadow: -1px -3px 2px rgb(49, 49, 49);
+    width: fit-content;
+    transition: background 200ms 700ms all;
+    animation: nameColor 2500ms cubic-bezier(0.1, 0.7, 1.0, 0.1) 300ms infinite;
+    
+}
+#sidenav .flex .p p{
+    font-size: 11px;
+    text-align: center;
+    margin-top: -10px;
+    color: rgb(255, 154, 39);
+    font-weight: 600;
+}
+#sidenav .flex ul li{
+    list-style: none;
+    padding-bottom: 50px;
+}
+#sidenav .flex ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 10px 40px;
+    transition: background 400ms 200ms ease-in-out,
+                color 400ms 200ms ease-in;
+    border-radius: 5px;
+}
+#sidenav .flex ul li a:hover{
+    color: white;
+    background: rgba(246, 13, 188, 0.924);
+}
+/* End of side navbar style*/
+
+
+
+
+/* This is the style for the top navbar */
+.app main .top{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+.app main .top .hamburger{
+    cursor: pointer;
+
+}
+.app main .top .hamburger .line{
+    border: 1.1px solid rgb(190, 185, 185);
+    width: 30px;
+    margin-top: 5px;
+    
+}
+
+
+.app main .top .hamburger .line:nth-child(2){
+    width: 20px;
+}
+.app main .top .lines .line:first-child{
+    transform: rotate(90deg);
+}
+.app main .top .lines .line:last-child{
+    transform: rotate(0deg);
+    margin-top: -2px;
+}
+.app main .top .lines .line:nth-child(2){
+    display: none;
+}
+/* Top navbar style ends */
+
+/* .bg{
+    background: url(https://i.pinimg.com/originals/a8/fa/f1/a8faf1b25a487ee49e69d06fc4c70178.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+/* This is the stye for the introduction section */
+.app #intro{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    border-bottom: 1px solid rgb(34, 33, 33);
+    min-height: 250px;
+    
+    
+}
+.app #intro .myself div{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.app #intro #myname{
+    font-size: 35px;
+    font-weight: 900;
+    font-family: cursive;
+    text-shadow: -1px -3px 2px rgb(49, 49, 49);
+    width: fit-content;
+    transition: background 200ms 700ms all;
+    animation: nameColor 2500ms cubic-bezier(0.1, 0.7, 1.0, 0.1) 300ms infinite; 
+    letter-spacing: 5px;
+}
+.app #intro #cursor{
+    width: 2px;
+    background: white;
+    display: inline-block;
+    margin-left: 5px;
+    
+}
+.app #intro #cursor.blink{
+    animation: blink 500ms ease 100ms infinite;
+}
+.app #intro #preps{
+    border-bottom: 2px solid rgb(170, 241, 123);
+    padding-bottom: 5px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.app #intro .titles{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Introduction secton ends here */
+.app #portfolio{
+    padding: 30px 0;
+}
+.app #portfolio .title{
+    display: flex;
+    justify-content: center;
+}
+.app #portfolio .title h1, .app #contact h1{
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 10px;
+    font-family: cursive;
+    border-bottom: 3px solid rgb(245, 241, 211);
+    width: fit-content;
+}
+
+.app #portfolio #projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.app #portfolio #projects .project{
+    margin: 10px auto;
+    
+    width: 90%;
+    overflow: hidden;
+    height: 300px;
+    
+}
+.app #portfolio #projects .project:hover{
+    transform: skewY(3deg);
+    background: #fff;
+}
+.app #portfolio #projects .project .details{
+    float: right;
+    background: rgb(86, 87, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    height: 90%;
+    margin: 10px;
+}
+.app #portfolio #projects .project .details h3{
+    font-size: 30px;
+}
+
+
+
+
+/* End of Portfolio section style */
+
+
+
+/* Contact Section */
+.app #contact{
+    padding: 10px;
+}
+.contact-info{
+    display:flex;
+    justify-content: space-between;
+    width: 500px;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.contact-info a{
+    text-decoration: none;
+    color: white;
+    padding:20px;
+    display:flex;
+    align-items: center;
+}
+.contact-info a:hover{
+    color: brown;
+}
+.contact-info i{
+    font-size: 30px;
+}
+
+/* Footer */
+.app main #footer{
+    font-size: 18px;
+    text-align:right;
+    padding: 20px 0;
+    border-top: 1px solid rgb(56, 55, 55);
+    color: rgb(243, 150, 0);
+}
+
+
+@media screen and (max-width:800px){
+    .app #portfolio #projects{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+
+
+
+@keyframes blink{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes nameColor{
+    0%{background: linear-gradient(125deg, white , rgb(197, 69, 133) 80%, sandybrown 30%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;}
+    40%{background: linear-gradient(45deg, rgb(29, 233, 39), white 80% , rgb(197, 69, 133) 30%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;}
+    60%{background: linear-gradient(45deg, rgb(246, 168, 21) , rgb(29, 233, 97) 80%, white 30%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;}
+    80%{background: linear-gradient(45deg,rgb(231, 5, 175) rgb(246, 168, 21) 80%, rgb(29, 233, 97) 30%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;}
+    100%{background: linear-gradient(45deg, rgb(68, 0, 255),rgb(231, 5, 175)  80%, rgb(246, 168, 21) 30%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;}
+}
