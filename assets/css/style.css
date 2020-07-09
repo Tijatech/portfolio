@@ -63,29 +63,39 @@ body{
     
 }
 #sidenav .flex .p p{
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
     margin-top: -10px;
-    color: rgb(255, 154, 39);
+    color: brown;
     font-weight: 600;
 }
 #sidenav .flex ul li{
     list-style: none;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 #sidenav .flex ul li a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 18px;
     padding: 10px 40px;
-    transition: background 400ms 200ms ease-in-out,
-                color 400ms 200ms ease-in;
-    border-radius: 5px;
+    transition: border 300ms 100ms ease-in-out,
+                color 300ms 100ms ease-in;
+    border-radius: 50px;
 }
 #sidenav .flex ul li a:hover{
-    color: white;
-    background: rgba(246, 13, 188, 0.924);
+    color: brown;
+   border-left: 5px solid brown;
 }
+#sidenav .social a{
+    color:white;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 30px;
+}
+#sidenav .social a:hover{
+    color: royalblue;
+}
+
 /* End of side navbar style*/
 
 
@@ -125,12 +135,6 @@ body{
 }
 /* Top navbar style ends */
 
-/* .bg{
-    background: url(https://i.pinimg.com/originals/a8/fa/f1/a8faf1b25a487ee49e69d06fc4c70178.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-} */
 /* This is the stye for the introduction section */
 .app #intro{
     font-weight: 700;
